@@ -1,0 +1,193 @@
+/*@group general*/
+$mobileTime: 0.25s; 
+.navigation_mobile{
+	display: block;
+}
+.navigation_desktop{
+	display: none;
+}
+.overlay{
+	left: calc(100% - 72px);
+	top: 60px;
+}
+.icon{
+	width: 70px;
+	height: 74px;
+	position: relative;
+	top: -27px;
+	&.icon_open{
+		left: calc(50% - 128px);	
+	}
+	&.icon_close{
+		left: calc(50% - 122px);	
+	}
+}
+
+.title_desktop{
+	display: none;
+}
+.title_mobile{
+	display: none;
+}
+.anim_h{
+	-webkit-transition: height $mobileTime; 
+	transition: height $mobileTime;
+}
+.anim{
+	-webkit-transition: transform $mobileTime; 
+	-webkit-transition: -webkit-transform $mobileTime; 
+	transition: transform $mobileTime;
+	transition: -webkit-transform $mobileTime;	
+}
+.close{
+	transform: translateX(0%);
+	-ms-transform: translateX(0%);
+	-webkit-transform: translateX(0%);
+	transform: translateX(0%);
+
+	@extend .anim;
+}
+.out{
+	transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
+	-webkit-transform: translateX(-100%);
+	transform: translateX(-100%);
+
+	@extend .anim;
+}
+.in{
+	transform: translateX(0);
+	-ms-transform: translateX(0);
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+
+	@extend .anim;
+}
+.open{
+	transform: translateX( calc(100% - 72px) );
+	-ms-transform: translateX( calc(100% - 72px) );
+	-webkit-transform: translateX( calc(100% - 72px) );
+	transform: translateX( calc(100% - 72px) );
+
+	@extend .anim;
+}
+
+.full_width{
+	width: calc(100% + 48px);
+	margin-left: -24px;
+}
+.full_width_72{
+	width: calc(50% - 48px);
+	margin-left: -24px;
+}
+
+
+/*@end general*/
+
+/*@group navigation*/
+.navigation_mobile{
+	height: 60px;
+	background: $magenta;
+	padding: 20px 24px;
+	transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	width: 200%;
+	@extend .anim;
+
+
+	.list_mobile{
+		background-color: white;
+		position: relative;
+		z-index: 99;
+		@extend .full_width_72;
+		@extend .out;
+		&.open{
+			@extend .in;
+		}
+		.menu_mobile_item{
+			height: 48px;
+			overflow: hidden;
+			cursor: pointer;
+			position: relative;
+			@extend .anim_h;
+			a, p{
+				font-size: 21px;
+				line-height: 1;
+				color: #000;
+				margin: 0;
+				padding: 15px 24px;
+				display: block;
+				&:hover, &:active{
+					background: $light_gray;
+				}
+			}
+			
+			.sub_menu_mobile{
+				li{
+					cursor: pointer;
+					height: 48px;
+					a{
+						font-size: 16px;
+						&:hover, &:active{
+							color: $magenta;
+						}
+					}
+				}
+			}
+			.icon_arrow{
+				position: absolute;
+				right: 15px;
+				top: 18px;
+				-ms-transform: rotate(0);
+				-webkit-transform: rotate(0);
+				transform: rotate(0);
+				@extend .anim;
+				&.arrow_open{
+					-ms-transform: rotate(180deg);
+					-webkit-transform: rotate(180deg);
+					transform: rotate(180deg);
+				}
+			}
+			&.subitem_open{
+				height: 100%;
+			}
+		}
+
+	}
+	.logo_mobile{
+		width: 50px;
+		position: relative;
+		top: -54px;
+	}
+	&.headerOpen{
+		@extend .close;
+	}
+}
+.banner{
+	padding: 0 24px;
+	@extend .close;
+	.wrapper{
+		height: 240px;
+		@extend .full_width;
+	}
+	.title_mobile{
+		color: #000;
+		font-size: 44px;
+		line-height: 1.095;
+		margin-top: 43px;
+		margin-bottom: 0;
+	}
+	.desc{
+		margin-top: 35px;
+		font-size: 14px;
+		line-height: 1.725;
+		text-align: justify;
+	}
+	&.open{
+		@extend .open;
+	}
+} 
+/*@end navigation*/
+

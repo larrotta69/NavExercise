@@ -1,0 +1,167 @@
+/*@group general*/
+$time: 0.25s; 
+*{
+	box-sizing: border-box;
+}
+.title_mobile{
+	display: none;
+}
+.animated{
+	-webkit-transition: opacity $time; 
+    transition: opacity $time;
+}
+.garde_bold{
+	font-family: 'HUGEAvantGardeBold';
+}
+.galaxie{
+	font-family: 'Galaxie'; 
+}
+.list{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	a{
+		text-decoration: none;	
+	}
+}
+.navigation_mobile{
+	display:none;
+}
+.overlay{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: $translucent_black;
+	display: none;
+	opacity: 0;
+	@extend .animated;
+	&.active{
+		opacity: 1;
+	}
+}
+/*@end general*/
+
+/*@group navigation*/
+.navigation{
+	height: 72px;
+	background: $magenta;
+	
+	.menu{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+
+		.logo{
+			margin-right: 72px;
+			padding: 22px 24px 23px;
+			img{
+				width: 60px;
+				height: 24px;	
+			}
+			a{
+				padding: 0;
+			}
+			&:hover{
+				background: none;
+
+			}
+		}
+
+		> li{
+			margin-right: 48px;
+			cursor: pointer;
+			height: 72px;
+			position: relative;
+			> a, > p{
+				font-size: 21px;
+				line-height: 1;
+				color: white;
+				padding: 24px 24px 27px;
+				display: block;
+				margin: 0;
+			}
+			&:hover{
+				background: white;
+				> a, > p{
+					color: $magenta;	
+				}
+			}
+			&:last-child{
+				margin: 0;
+			}
+		}
+
+	}
+}
+/*@end navigation*/
+
+
+/*@group sub menu*/
+.sub_menu{
+	position: absolute;
+	width: 225px;
+	z-index: 99;
+	background-color: white;
+	display: none;
+	opacity: 0;
+	@extend .animated;
+	&.active{
+		opacity: 1;
+	}
+	li{
+		a{
+			font-size: 16px;
+			color: #000;
+			line-height: 48px;
+			padding: 20px 0 0 24px;
+  			text-align: left;
+  			font-weight: normal;
+		}
+		&:hover{
+			background: $light_gray;
+			a{
+				color: $magenta;
+			}
+		}
+	}
+}
+/*@end sub menu*/
+
+/*@group banner*/
+.banner{
+	.wrapper{
+		height: 640px;
+		background: url("../images/background-image.jpg") no-repeat;
+		background-size: cover;
+		position: relative;
+	}
+
+	.cover{
+	}
+	.title{
+		font-size: 120px;
+		line-height: 132px;
+		color: white;	
+		width: 784px;
+		position: absolute;
+		top: 50%;
+		-ms-transform: translateY(-50%); /* IE 9 */
+		-webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
+		transform: translateY(-50%);
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.desc{
+		font-size: 24px;
+		line-height: 36px;
+		text-align: center;
+		margin: 50px auto 0;
+		max-width: 958px;
+	}
+}
+/*@end banner*/
+

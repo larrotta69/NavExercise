@@ -1,0 +1,9 @@
+@import 'components/fonts',
+		'components/colors',
+		'vendor/normalize',
+		'components/navigator';
+		
+@media only screen and (max-width: 768px) {
+	@import 'components/mobile';
+}		
+		
