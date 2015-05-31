@@ -82,7 +82,7 @@ $time: 0.25s;
 				display: block;
 				margin: 0;
 			}
-			&:hover{
+			&:hover, &.activeTab{
 				background: white;
 				> a, > p{
 					color: $magenta;	
@@ -91,6 +91,7 @@ $time: 0.25s;
 			&:last-child{
 				margin: 0;
 			}
+
 		}
 
 	}

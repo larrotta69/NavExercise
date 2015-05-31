@@ -1,9 +1,12 @@
 @import 'components/fonts',
 		'components/colors',
 		'vendor/normalize',
-		'components/navigator';
+		'components/navigator',
+		'components/medium';
 		
 @media only screen and (max-width: 768px) {
 	@import 'components/mobile';
 }		
+
+
 		

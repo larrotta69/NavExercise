@@ -1,5 +1,16 @@
 /*@group general*/
 $mobileTime: 0.25s; 
+body, html{
+	overflow-x: hidden;
+	height: 100vh;
+}
+.copyright{
+	@extend .full_width_72;
+	position: relative;
+	top: -60px;
+	z-index: 999;
+	left: 24px;
+}
 .navigation_mobile{
 	display: block;
 }
@@ -15,11 +26,17 @@ $mobileTime: 0.25s;
 	height: 74px;
 	position: relative;
 	top: -27px;
+	opacity: 1;
+	cursor: pointer;
 	&.icon_open{
 		left: calc(50% - 128px);	
 	}
 	&.icon_close{
 		left: calc(50% - 122px);	
+	}
+	&.hideIcon{
+		opacity: 0;
+		@extend .anim_fade;
 	}
 }
 
@@ -27,7 +44,11 @@ $mobileTime: 0.25s;
 	display: none;
 }
 .title_mobile{
-	display: none;
+	display: block;
+}
+.anim_fade{
+	-webkit-transition: opacity 0.1s; 
+	transition: opacity 0.1s;
 }
 .anim_h{
 	-webkit-transition: height $mobileTime; 
@@ -81,7 +102,6 @@ $mobileTime: 0.25s;
 	margin-left: -24px;
 }
 
-
 /*@end general*/
 
 /*@group navigation*/
@@ -101,6 +121,11 @@ $mobileTime: 0.25s;
 		background-color: white;
 		position: relative;
 		z-index: 99;
+		top: -28px;
+		min-height: calc(100vh - 72px);
+		overflow: hidden;
+		overflow-y: scroll;
+		padding-bottom: 50px;
 		@extend .full_width_72;
 		@extend .out;
 		&.open{

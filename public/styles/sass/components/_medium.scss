@@ -1,0 +1,43 @@
+@media only screen and (max-width: 980px) and (min-width: 769px){
+	.navigation{
+		.menu{
+			.logo{
+				margin-right: 0px;
+			}
+			> li{
+				margin-right: 0px;
+				a, p{
+					font-size: 18px;
+					padding: 26px 24px 28px;
+				}
+				&:last-child{
+					.sub_menu{
+						right: 0px;
+					}
+				}
+			}
+		} 
+	}
+}
+@media only screen and (max-width: 1200px) and (min-width: 981px){
+	.navigation{
+		.menu{
+			.logo{
+				margin-right: 36px;
+			}
+			> li{
+				margin-right: 24px;
+				a, p{
+					font-size: 21px;
+  					padding: 24px 24px 27px;	
+				}
+				&:last-child{
+					.sub_menu{
+						right: 0px;
+					}
+				}
+			}
+		} 
+	}
+	
+}
