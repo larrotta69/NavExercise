@@ -36,13 +36,13 @@ Navigation.prototype.createNav = function(obj){
 		var position = indexItem + 1;
 		if ( item.items.length == 0 ){ 
 			//Desktop
-			menu.innerHTML += '<li class="menu_item"><a href="'+item.url+'">'+item.label+'</a></li>';
+			menu.innerHTML += '<li class="menu_item"><a href="'+item.url+'" tabindex="'+indexItem+'" title="Link to'+item.label+'">'+item.label+'</a></li>'; 
 			//Mobile
 			menuMobile.innerHTML += '<li class="menu_mobile_item menu_mobile_item_no"><a href="'+item.url+'">'+item.label+'</a></li>';
 		}
 		else{
 			//Desktop
-			menu.innerHTML += '<li class="menu_item menu_item_subitem"><p>'+item.label+'</p><ul class="sub_menu list galaxie"></ul></li>';
+			menu.innerHTML += '<li class="menu_item menu_item_subitem"><p tabindex="'+indexItem+'" title="'+item.label+'">'+item.label+'</p><ul class="sub_menu list galaxie"></ul></li>';
 			//Mobile
 			menuMobile.innerHTML += '<li class="menu_mobile_item menu_mobile_item_subitem"><p class="garde_bold">'+item.label+'</p><img class="icon_arrow" src="images/arrow.svg" /><ul class="sub_menu_mobile list galaxie"></ul></li>';
 
