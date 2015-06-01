@@ -12,17 +12,25 @@ Simple accessibility practices such as anchor titles, tabindex and esc key in or
 * Task automation
 
 Gulp to automate tasks.
+
 Three main tasks to compile sass, compile js and watch for code assets changes.
+
 This Gulp configuration uses compile, uglify and concatenate.
 
 * Technical 
 
 The test is based in tree JavaScript objects (utilities, mobile and navigation).
+
 Navigation object populates the DOM from the JSON file.
+
 Navigation object adds the behavior for desktop navigation.
+
 Mobile object adds the mobile behavior of main navigation, secondary navigation and animations.
+
 Utilities has many helpers for DOM manipulations and validations.
+
 I use SASS to make a modular estructure.
+
 I use CSS animations.
 
 ## Overview
