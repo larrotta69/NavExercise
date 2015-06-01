@@ -6,14 +6,17 @@
 Here is a list of the test features:
 
 * Accessibility
+
 Simple accessibility practices such as anchor titles, tabindex and esc key in order to allow keyboard navigation, page title and description.
 
 * Task automation
+
 Gulp to automate tasks.
 Three main tasks to compile sass, compile js and watch for code assets changes.
 This Gulp configuration uses compile, uglify and concatenate.
 
 * Technical 
+
 The test is based in tree JavaScript objects (utilities, mobile and navigation).
 Navigation object populates the DOM from the JSON file.
 Navigation object adds the behavior for desktop navigation.
